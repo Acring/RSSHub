@@ -10,6 +10,7 @@ async function parse(url, cookie = '') {
             cookie,
         },
     });
+
     const $ = load(data);
 
     const publishedTime = $('meta[property="article:published_time"]').attr('content');

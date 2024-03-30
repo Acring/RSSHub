@@ -34,6 +34,7 @@ async function handler(ctx) {
     const user = ctx.req.param('user');
 
     const cookie = config.medium.cookies[user];
+
     if (cookie === undefined) {
         throw new Error(`缺少 Medium 用户 ${user} 登录后的 Cookie 值`);
     }
